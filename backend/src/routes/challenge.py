@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel
-from sqlalchemy import Session
+from sqlalchemy.orm import Session
 from ..database.db import (
     get_challenge_quota,
     create_challenge,
