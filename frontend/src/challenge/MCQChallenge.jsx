@@ -43,7 +43,7 @@ export function MCQChallenge({challenge, showExplaination = false}){
                 </div>
             ))}
         </div>
-        {showExplaination && selectedOption !== null && (
+        {shouldShowExplanation && selectedOption !== null && (
             <div className="explanation">
                 <h4>Explanation</h4>
                 <p>{challenge.explanation}</p>
