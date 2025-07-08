@@ -40,7 +40,7 @@ A full-stack web application that lets users generate and practice coding challe
 
 > Users can select a difficulty, generate a challenge, view an explanation, and track their history. Authenticated users have limited daily usage, with a reset period every 24 hours.
 
-![screenshot](Screenshot generate.png)
+!([Screenshot generate.png](https://github.com/Sandpaperr/code_challenge_app/blob/2cb4817bdad2959a410fc98a69427e5a1c71e65f/Screenshot%20generate.png)
 
 ---
 
