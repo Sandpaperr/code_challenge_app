@@ -100,7 +100,7 @@ The backend sends user prompts to a GenAI model (like Gemini or OpenAI GPT) and 
 ```bash
 cd backend
 uv init .
-uv add fastapi uvicorn sqlalchemy python-dotenv openai clerk-sdk
+uv add fastapi uvicorn sqlalchemy python-dotenv google clerk-sdk
 uv run src/server.py
 ```
 
@@ -133,10 +133,12 @@ VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 
 ## 💡 Extending the Project
 
+- Better text formatting
+- integrate other filters (e.g. topic, coding language) 
 - Add a leaderboard or gamified elements
 - Support other types of questions (e.g., fill-in-the-blank)
 - Integrate other LLMs (Claude, Mistral, etc.)
-- Monetize access using Stripe and webhook callbacks
+- Monetise access using Stripe and webhook callbacks
 
 ---
 
