@@ -8,19 +8,17 @@ export const useApi = () => {
         const defaultOptions = {
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": 'Bearer ${token}'
+                "Authorization": `Bearer ${token}`
             }
         }
 
-        const response = await fetch('http://localhost:8000/api/${endpoint}',
+        const response = await fetch(`http://localhost:8000/api/${endpoint}`,{
             ...defaultOptions,
             ...options,
-            
-
-        )
+        })
 
         if (!response.ok){
-            const errorData = await response.json().catch() (() => null)
+            const errorData = await response.json().catch(() => null)
             if (response.status === 429){
                 throw new Error("Daily quota exceeded")
             }
