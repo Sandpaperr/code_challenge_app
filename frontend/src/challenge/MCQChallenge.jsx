@@ -1,6 +1,7 @@
 import "react"
 import { useState } from "react"
 
+
 export function MCQChallenge({challenge, showExplaination = false}){
 
     const [selectedOption, setSelectedOption] = useState(null)
@@ -11,6 +12,7 @@ export function MCQChallenge({challenge, showExplaination = false}){
         : challenge.options
 
     const handleOptionSelect = (index) => {
+        
         if (selectedOption !== null) return;
         setSelectedOption(index)
         setShouldShowExplanation(true)

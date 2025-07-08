@@ -29,7 +29,7 @@ export function ChallengeGenerator(){
         setIsLoading(true)
         setError(null)
 
-        try{
+        try{makeRequest
             const data = await makeRequest("generate-challenge", {
                 method:"POST",
                 body: JSON.stringify({difficulty})
@@ -89,7 +89,8 @@ export function ChallengeGenerator(){
             <p>{error}</p>
         </div>}
 
-        {challenge && <MCQChallenge challenge={challenge}/>}
+        {/* If I keep the component on and change the coontent, the button pressed will not reset*/}
+        {challenge && !isLoading && <MCQChallenge challenge={challenge}/>}
 
     </div>
 }
